@@ -134,6 +134,9 @@ function generatePassword() {
     alert(`Please choose at least one character type!`);
   }
 
+  //This is a new array that collects only the characters preffered by the user
+  var finalPasswordParameters = [];
+
   // Return our created password
   return password;
 }
