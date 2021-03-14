@@ -99,6 +99,14 @@ function generatePassword() {
   // Transform User input from string to number
   const passwordLength = parseInt(userPasswordLength, 10);
 
+  //makes sure password length is between 8 and 128 characters
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert(
+      `Your input does not match the criteria. Please choose a password length between 8 and 128 characters!`
+    );
+    return;
+  }
+
   // Return our created password
   return password;
 }
