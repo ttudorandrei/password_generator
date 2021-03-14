@@ -104,7 +104,8 @@ function generatePassword() {
     alert(
       `Your input does not match the criteria. Please choose a password length between 8 and 128 characters!`
     );
-    return;
+    return (password =
+      "Please choose a password length between 8 and 128 characters and try again!");
   }
 
   //defines variables and collects user data
@@ -132,6 +133,8 @@ function generatePassword() {
     !confirmNumbers
   ) {
     alert(`Please choose at least one character type!`);
+    return (password =
+      "Please choose at least one character type and try again!");
   }
 
   //This is a new array that collects only the characters preffered by the user
