@@ -159,6 +159,16 @@ function generatePassword() {
 
   console.log(finalPasswordParameters.length);
 
+  // This snippet chooses random characters from the array that contains the characters preferred by the user
+  // It uses math.random function to randomize characters inside the array.
+  // It uses math.floor to return the largest integer less than or equal to a given number (obtained, in this case through math.random)
+  for (let i = 0; i < passwordLength; i++) {
+    password +=
+      finalPasswordParameters[
+        Math.floor(Math.random() * finalPasswordParameters.length)
+      ];
+  }
+
   // Return our created password
   return password;
 }
