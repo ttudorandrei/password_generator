@@ -139,22 +139,22 @@ function generatePassword() {
 
   //If user confirms lowercase characters, they will be pushed into the new array
   if (confirmLowercase) {
-    finalPasswordParameters.push(lowercase);
+    finalPasswordParameters.push(...lowercase);
   }
 
   //if user confirms uppercase characters, they will be pushed into the new array
   if (confirmUppercase) {
-    finalPasswordParameters.push(uppercase);
+    finalPasswordParameters.push(...uppercase);
   }
 
   //if user confirms symbols, they will be pushed into the new array
   if (confirmSymbols) {
-    finalPasswordParameters.push(symbols);
+    finalPasswordParameters.push(...symbols);
   }
 
   //if the user confirms numbers, they will be pushed into the new array
   if (confirmNumbers) {
-    finalPasswordParameters.push(numbers);
+    finalPasswordParameters.push(...numbers);
   }
 
   console.log(finalPasswordParameters.length);
