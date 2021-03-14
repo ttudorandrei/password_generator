@@ -107,6 +107,23 @@ function generatePassword() {
     return;
   }
 
+  //defines variables and collects user data
+  const confirmLowercase = confirm(
+    `Do you want your password to contain lowercase letters?`
+  );
+
+  const confirmUppercase = confirm(
+    `Do you want your password to contain uppercase letters?`
+  );
+
+  const confirmSymbols = confirm(
+    `Do you want your password to contain symbols?`
+  );
+
+  const confirmNumbers = confirm(
+    `Do you want your password to contain numbers?`
+  );
+
   // Return our created password
   return password;
 }
