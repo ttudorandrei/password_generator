@@ -88,14 +88,19 @@ const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 // Declare a new function on line 3
 function generatePassword() {
-	// Create a variable to store our generated password
-	var password = ''
+  // Create a variable to store our generated password
+  var password = "";
 
-	// Logic would go here
-	...
+  // this snippet prompts the user to choose a password length. The value the user inputs will be stored in "userPasswordLength" variable.
+  const userPasswordLength = prompt(
+    "Please choose a password length between 8 and 128 characters"
+  );
 
-	// Return our created password
-	return password;
+  // Transform User input from string to number
+  const passwordLength = parseInt(userPasswordLength, 10);
+
+  // Return our created password
+  return password;
 }
 
 // Write password to the #password input
@@ -104,7 +109,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
