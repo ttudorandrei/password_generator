@@ -124,6 +124,16 @@ function generatePassword() {
     `Do you want your password to contain numbers?`
   );
 
+  // This snippet alerts user if no type of character was selected
+  if (
+    !confirmLowercase &&
+    !confirmUppercase &&
+    !confirmSymbols &&
+    !confirmNumbers
+  ) {
+    alert(`Please choose at least one character type!`);
+  }
+
   // Return our created password
   return password;
 }
