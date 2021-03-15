@@ -20,4 +20,5 @@ As a developer I was tasked with building a Password Generator
 ## Link to deployed application
 
 You can access the deployed application [here](https://ttudorandrei.github.io/password_generator/)
+
 You can access the Github repository [here](https://github.com/ttudorandrei/password_generator)
