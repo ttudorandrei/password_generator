@@ -108,22 +108,34 @@ function generatePassword() {
       "Please choose a password length between 8 and 128 characters and try again!");
   }
 
-  //defines variables and collects user data
+  //defines constants that will be used in function
   const confirmLowercase = confirm(
     `Do you want your password to contain lowercase letters?`
   );
-
   const confirmUppercase = confirm(
     `Do you want your password to contain uppercase letters?`
   );
-
   const confirmSymbols = confirm(
     `Do you want your password to contain symbols?`
   );
-
   const confirmNumbers = confirm(
     `Do you want your password to contain numbers?`
   );
+
+  //new array that collects all true preferences received from user
+  const finalPasswordParameters = [];
+
+  function checkAnswer(answer, array) {
+    if (answer) {
+      finalPasswordParameters.push(...array);
+      return;
+    }
+  }
+
+  checkAnswer(confirmLowercase, lowercase);
+  checkAnswer(confirmUppercase, uppercase);
+  checkAnswer(confirmSymbols, symbols);
+  checkAnswer(confirmNumbers, numbers);
 
   // This snippet alerts user if no type of character was selected
   if (
@@ -136,31 +148,6 @@ function generatePassword() {
     return (password =
       "Please choose at least one character type and try again!");
   }
-
-  //This is a new array that collects only the characters preffered by the user
-  var finalPasswordParameters = [];
-
-  //If user confirms lowercase characters, they will be pushed into the new array
-  if (confirmLowercase) {
-    finalPasswordParameters.push(...lowercase);
-  }
-
-  //if user confirms uppercase characters, they will be pushed into the new array
-  if (confirmUppercase) {
-    finalPasswordParameters.push(...uppercase);
-  }
-
-  //if user confirms symbols, they will be pushed into the new array
-  if (confirmSymbols) {
-    finalPasswordParameters.push(...symbols);
-  }
-
-  //if the user confirms numbers, they will be pushed into the new array
-  if (confirmNumbers) {
-    finalPasswordParameters.push(...numbers);
-  }
-
-  console.log(finalPasswordParameters.length);
 
   // This snippet chooses random characters from the array that contains the characters preferred by the user
   // It uses math.random function to randomize characters inside the array.
