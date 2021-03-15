@@ -112,12 +112,15 @@ function generatePassword() {
   const confirmLowercase = confirm(
     `Do you want your password to contain lowercase letters?`
   );
+
   const confirmUppercase = confirm(
     `Do you want your password to contain uppercase letters?`
   );
+
   const confirmSymbols = confirm(
     `Do you want your password to contain symbols?`
   );
+
   const confirmNumbers = confirm(
     `Do you want your password to contain numbers?`
   );
@@ -125,12 +128,12 @@ function generatePassword() {
   //new array that collects all true preferences received from user
   const finalPasswordParameters = [];
 
-  function checkAnswer(answer, array) {
+  const checkAnswer = (answer, array) => {
     if (answer) {
       finalPasswordParameters.push(...array);
       return;
     }
-  }
+  };
 
   checkAnswer(confirmLowercase, lowercase);
   checkAnswer(confirmUppercase, uppercase);
