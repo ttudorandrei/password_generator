@@ -1,6 +1,6 @@
 # Title
 
-Password Generated
+Password Generator
 
 ## Description
 
